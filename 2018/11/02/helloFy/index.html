@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="这是我第一个博客">
+<meta name="description" content="冒泡排序：普通冒泡排序1234567891011121314var arr = [3,2,4,1,5,7,6]var len = arr.lengthfor(var i = 0, i&amp;lt;len - 1, i++)&amp;#123;    for(var j = 0, j&amp;lt;len, j++&amp;gt;)&amp;#123;        if(arr[j]&amp;gt;arr[j+1])&amp;#123;">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello,fy">
+<meta property="og:title" content="javaScript排序算法学习篇">
 <meta property="og:url" content="https://fyxgb.github.io/2018/11/02/helloFy/index.html">
 <meta property="og:site_name" content="fyxgb">
-<meta property="og:description" content="这是我第一个博客">
+<meta property="og:description" content="冒泡排序：普通冒泡排序1234567891011121314var arr = [3,2,4,1,5,7,6]var len = arr.lengthfor(var i = 0, i&amp;lt;len - 1, i++)&amp;#123;    for(var j = 0, j&amp;lt;len, j++&amp;gt;)&amp;#123;        if(arr[j]&amp;gt;arr[j+1])&amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-05T08:34:57.000Z">
+<meta property="og:updated_time" content="2018-11-07T07:36:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello,fy">
-<meta name="twitter:description" content="这是我第一个博客">
+<meta name="twitter:title" content="javaScript排序算法学习篇">
+<meta name="twitter:description" content="冒泡排序：普通冒泡排序1234567891011121314var arr = [3,2,4,1,5,7,6]var len = arr.lengthfor(var i = 0, i&amp;lt;len - 1, i++)&amp;#123;    for(var j = 0, j&amp;lt;len, j++&amp;gt;)&amp;#123;        if(arr[j]&amp;gt;arr[j+1])&amp;#123;">
 
 
 
@@ -126,7 +126,7 @@
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
-  <title>hello,fy | fyxgb</title>
+  <title>javaScript排序算法学习篇 | fyxgb</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hello,fy</h1>
+          <h1 class="post-title" itemprop="name headline">javaScript排序算法学习篇</h1>
         
 
         <div class="post-meta">
@@ -346,7 +346,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  8
+                  928
                 </span>
               
 
@@ -371,7 +371,30 @@
       
 
       
-        <p>这是我第一个博客</p>
+        <h4 id="冒泡排序："><a href="#冒泡排序：" class="headerlink" title="冒泡排序："></a>冒泡排序：</h4><h5 id="普通冒泡排序"><a href="#普通冒泡排序" class="headerlink" title="普通冒泡排序"></a>普通冒泡排序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var arr = [3,2,4,1,5,7,6]</span><br><span class="line">var len = arr.length</span><br><span class="line">for(var i = 0, i&lt;len - 1, i++)&#123;</span><br><span class="line">    for(var j = 0, j&lt;len, j++&gt;)&#123;</span><br><span class="line">        if(arr[j]&gt;arr[j+1])&#123;</span><br><span class="line">            swap(j, j+1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function swap(m, n)&#123;</span><br><span class="line">    var arrValue = arr[m];</span><br><span class="line">    arr[m] = arr[n];</span><br><span class="line">    arr[n] = arrValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>通过外层循环来控制比较次数，内层循环是进行数之间的比较，不推荐使用该方法，时间复杂度为O(n^2);</p>
+</blockquote>
+<h5 id="优化过的冒泡排序："><a href="#优化过的冒泡排序：" class="headerlink" title="优化过的冒泡排序："></a>优化过的冒泡排序：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(var i = 0, i&lt;len, i++)&#123;</span><br><span class="line">    for(var j = 0, j&lt;len - 1 - i, j++&gt;)&#123;</span><br><span class="line">        if(arr[j]&gt;arr[j+1])&#123;</span><br><span class="line">            swap(j, j+1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>优化方法是利用后面的已经是排序好的数组，不需要再进行操作；</p>
+</blockquote>
+<h4 id="选择排序："><a href="#选择排序：" class="headerlink" title="选择排序："></a>选择排序：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">for(var i = 0; i&lt;len - 1; i++)&#123;</span><br><span class="line">    var indexMin = i;</span><br><span class="line">    for(var j = i; j&lt;len; j++)&#123;</span><br><span class="line">        if(arr[indexMin] &gt; arr[j])&#123;</span><br><span class="line">            indexMin = j;//这个是选择排序的关键，选择最小的数组，将其和外层的数组进行交换。</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(indexMin != i)&#123;</span><br><span class="line">        swap(indexMin, i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>外层循环是进行比较次数，内层循环是通过进行数的比较；</p>
+</blockquote>
+<h4 id="插入排序："><a href="#插入排序：" class="headerlink" title="插入排序："></a>插入排序：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var j, temp;</span><br><span class="line">for(var i = 1; i&lt;len; i++)&#123;</span><br><span class="line">    temp = arr[i];</span><br><span class="line">    j = i;</span><br><span class="line">    while(j&gt;0 &amp;&amp;  arr[j] &gt; temp)&#123;</span><br><span class="line">        arr[j] = arr[j - 1];</span><br><span class="line">        j--;//关键变量</span><br><span class="line">    &#125;</span><br><span class="line">    arr[j] = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>外层循环进行比较次数，while是插入排序的关键，是将temp这个数组和前面的数组进行比较</p>
+</blockquote>
+<h4 id="归并排序："><a href="#归并排序：" class="headerlink" title="归并排序："></a>归并排序：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">var mergeSortRec = function(array)&#123;</span><br><span class="line">    var length = array.length;</span><br><span class="line">    if(length === 1) &#123;//直到数组拆分到长度为1才停止</span><br><span class="line">        return array;</span><br><span class="line">    &#125;</span><br><span class="line">    var mid = Math.floor(length / 2),</span><br><span class="line">        left = array.slice(0, mid),</span><br><span class="line">        right = array.slice(mid, length);</span><br><span class="line">        return merge(mergeSortRec(left), mergeSortRec(right));//使用递归进行数组的拆分，并且嵌套了很多merge函数，用于后面组合数组时候比较</span><br><span class="line">    &#125;;</span><br><span class="line">var merge = function(left, right)&#123;</span><br><span class="line">    var result = [],</span><br><span class="line">    il = 0,</span><br><span class="line">    ir = 0;</span><br><span class="line">    while(il &lt; left.length &amp;&amp; ir &lt; right.length) &#123;</span><br><span class="line">        if(left[il] &lt; right[ir]) &#123;//这个比较很关键</span><br><span class="line">            result.push(left[il++]);</span><br><span class="line">        &#125; else&#123;</span><br><span class="line">            result.push(right[ir++]);   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;//关键控制在这里，当拆分到每个数组长度只为1时候开始进行组合，并且循环比较左右数组的大小</span><br><span class="line">    while (il &lt; left.length)&#123;//这个是只剩下左边数组才进行循环</span><br><span class="line">        result.push(left[il++]);</span><br><span class="line">    &#125;</span><br><span class="line">    while (ir &lt; right.length)&#123;</span><br><span class="line">        result.push(right[ir++]);</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>巧妙利用递归原理和while进行循环比较，很实用的一个数组方法，时间复杂度为O（nlog^n）;</p>
+</blockquote>
+<h4 id="快速排序："><a href="#快速排序：" class="headerlink" title="快速排序："></a>快速排序：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">var quick = function(array, left, right)&#123;</span><br><span class="line">    var index;</span><br><span class="line">    if (array.length &gt; 1) &#123;</span><br><span class="line">        index = partition(array, left, right); //保存左指针最后到指向的下标值，用于后续的条件判断</span><br><span class="line">    &#125;;</span><br><span class="line">    if (left &lt; index - 1) &#123;//当长度为3时候就可以做到排序完整</span><br><span class="line">        quick(array, left, index - 1);//触发再次排序</span><br><span class="line">    &#125;</span><br><span class="line">    if (index &lt; right) &#123;//继续进行右边的排序</span><br><span class="line">        quick(array, index, right);</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">var partition = function(array, left, right) &#123;</span><br><span class="line">    var pivot = array[Math.floor((right + left) / 2)],</span><br><span class="line">    i = left,</span><br><span class="line">    j = right;</span><br><span class="line">    while (i &lt;= j) &#123;</span><br><span class="line">        while (array[i] &lt; pivot) &#123;//函数while会执行完才执行下一个while循环，这样就确定了i的值</span><br><span class="line">            i++; </span><br><span class="line">        &#125;</span><br><span class="line">        while (array[j] &gt; pivot) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i &lt;= j)&#123;</span><br><span class="line">            swapQuickStort(array, i, j);//交换两边的值</span><br><span class="line">            i++;//继续将指针移动循环右边，同时移动右指针</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return i;</span><br><span class="line">&#125;;</span><br><span class="line">var swapQuickStort = function(array, index1, index2)&#123;</span><br><span class="line">    var aux = array[index1];</span><br><span class="line">    array[index1] = array[index2];</span><br><span class="line">    array[index2] = aux;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>原理也就是取中间值，有条件到进行拆分，之后把左边最大的和右边最小的交换，执行到每个拆分的数组排序完成，得到一个排序好的数组，性能较好的一个排序方式，时间复杂度O(nlog^n)；</p>
+</blockquote>
 
       
     </div>
@@ -399,7 +422,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://fyxgb.github.io/2018/11/02/helloFy/" title="hello,fy">https://fyxgb.github.io/2018/11/02/helloFy/</a>
+    <a href="https://fyxgb.github.io/2018/11/02/helloFy/" title="javaScript排序算法学习篇">https://fyxgb.github.io/2018/11/02/helloFy/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -471,8 +494,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -535,6 +567,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#冒泡排序："><span class="nav-number">1.</span> <span class="nav-text">冒泡排序：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#普通冒泡排序"><span class="nav-number">1.1.</span> <span class="nav-text">普通冒泡排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化过的冒泡排序："><span class="nav-number">1.2.</span> <span class="nav-text">优化过的冒泡排序：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择排序："><span class="nav-number">2.</span> <span class="nav-text">选择排序：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入排序："><span class="nav-number">3.</span> <span class="nav-text">插入排序：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归并排序："><span class="nav-number">4.</span> <span class="nav-text">归并排序：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速排序："><span class="nav-number">5.</span> <span class="nav-text">快速排序：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -562,7 +610,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8</span>
+    <span title="Site words total count">928</span>
   
 </div>
 
