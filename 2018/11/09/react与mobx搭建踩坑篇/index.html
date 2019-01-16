@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="javascript,设计模式,">
+  <meta name="keywords" content="react,mobx,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="单例模式定义保证一个类仅有一个实例,并提供一个访问它的全局访问点。 #####">
-<meta name="keywords" content="javascript,设计模式">
+<meta name="description" content="全局安装create-react-app123npm install -g create-react-apporyarn -g create-react-app 新建一个项目1create-react-app 项目文件夹名称 启动12cd 项目文件夹名称yarn start 安装UI组件库123因为create-react-app 自带sass-loader(https://facebook.gi">
+<meta name="keywords" content="react,mobx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js设计模式学习－－单例模式">
-<meta property="og:url" content="https://fyxgb.github.io/2018/11/09/javascript设计模式学习篇/index.html">
+<meta property="og:title" content="react,mobx学习篇">
+<meta property="og:url" content="https://fyxgb.github.io/2018/11/09/react与mobx搭建踩坑篇/index.html">
 <meta property="og:site_name" content="fyxgb">
-<meta property="og:description" content="单例模式定义保证一个类仅有一个实例,并提供一个访问它的全局访问点。 #####">
+<meta property="og:description" content="全局安装create-react-app123npm install -g create-react-apporyarn -g create-react-app 新建一个项目1create-react-app 项目文件夹名称 启动12cd 项目文件夹名称yarn start 安装UI组件库123因为create-react-app 自带sass-loader(https://facebook.gi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-15T08:43:18.000Z">
+<meta property="og:updated_time" content="2019-01-16T03:25:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js设计模式学习－－单例模式">
-<meta name="twitter:description" content="单例模式定义保证一个类仅有一个实例,并提供一个访问它的全局访问点。 #####">
+<meta name="twitter:title" content="react,mobx学习篇">
+<meta name="twitter:description" content="全局安装create-react-app123npm install -g create-react-apporyarn -g create-react-app 新建一个项目1create-react-app 项目文件夹名称 启动12cd 项目文件夹名称yarn start 安装UI组件库123因为create-react-app 自带sass-loader(https://facebook.gi">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://fyxgb.github.io/2018/11/09/javascript设计模式学习篇/">
+  <link rel="canonical" href="https://fyxgb.github.io/2018/11/09/react与mobx搭建踩坑篇/">
 
 
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
-  <title>js设计模式学习－－单例模式 | fyxgb</title>
+  <title>react,mobx学习篇 | fyxgb</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fyxgb.github.io/2018/11/09/javascript设计模式学习篇/">
+    <link itemprop="mainEntityOfPage" href="https://fyxgb.github.io/2018/11/09/react与mobx搭建踩坑篇/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fyxgb">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js设计模式学习－－单例模式</h1>
+          <h1 class="post-title" itemprop="name headline">react,mobx学习篇</h1>
         
 
         <div class="post-meta">
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
                   </a>
                 </span>
 
@@ -326,8 +326,8 @@
                 
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
+                  <a href="/categories/react/mobx/" itemprop="url" rel="index">
+                    <span itemprop="name">mobx</span>
                   </a>
                 </span>
 
@@ -357,7 +357,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  31
+                  357
                 </span>
               
 
@@ -382,9 +382,19 @@
       
 
       
-        <h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>保证一个类仅有一个实例,并提供一个访问它的全局访问点。</p>
-<p>#####</p>
-
+        <h5 id="全局安装create-react-app"><a href="#全局安装create-react-app" class="headerlink" title="全局安装create-react-app"></a>全局安装create-react-app</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g create-react-app</span><br><span class="line">or</span><br><span class="line">yarn -g create-react-app</span><br></pre></td></tr></table></figure>
+<h5 id="新建一个项目"><a href="#新建一个项目" class="headerlink" title="新建一个项目"></a>新建一个项目</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app 项目文件夹名称</span><br></pre></td></tr></table></figure>
+<h5 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd 项目文件夹名称</span><br><span class="line">yarn start</span><br></pre></td></tr></table></figure>
+<h5 id="安装UI组件库"><a href="#安装UI组件库" class="headerlink" title="安装UI组件库"></a>安装UI组件库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">因为create-react-app 自带sass-loader(https://facebook.github.io/create-react-app/docs/adding-a-sass-stylesheet) 但是还需要添加node-sass</span><br><span class="line"></span><br><span class="line">yarn add node-sass -D</span><br></pre></td></tr></table></figure>
+<h5 id="添加数据管理mobx"><a href="#添加数据管理mobx" class="headerlink" title="添加数据管理mobx"></a>添加数据管理mobx</h5><p>react 本身就有自己的状态管理 state，但随着项目的复杂性页面的增多其维护性不是那么友好，于是出现了针对 react 的数据状态管理，如 flux、redux、mobx 等等。下面我们就讲解项目如何配置 mobx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add mobx mobx-react -S</span><br><span class="line">yarn add mobx -S</span><br></pre></td></tr></table></figure></p>
+<h5 id="新建文件夹-stores"><a href="#新建文件夹-stores" class="headerlink" title="新建文件夹 stores"></a>新建文件夹 stores</h5><p>在 src 目录下新建一个文件夹 stores，创建 index.js 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const store = &#123;&#125;</span><br><span class="line"></span><br><span class="line">export default store</span><br></pre></td></tr></table></figure></p>
+<h5 id="修改入口文件"><a href="#修改入口文件" class="headerlink" title="修改入口文件"></a>修改入口文件</h5><p>修改根目录下的 index.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">import &#123; Provider &#125; from &apos;mobx-react&apos;</span><br><span class="line">import stores from &apos;./stores&apos;</span><br><span class="line">...</span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;Provider &#123;...stores&#125;&gt;</span><br><span class="line">        &lt;App /&gt;</span><br><span class="line">    &lt;/Provider&gt;, </span><br><span class="line">document.getElementById(&apos;root&apos;));</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<h5 id="关于使用修饰器报错解决"><a href="#关于使用修饰器报错解决" class="headerlink" title="关于使用修饰器报错解决"></a>关于使用修饰器报错解决</h5><p>修饰器插件安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add babel-plugin-transform-decorators-legacy -D</span><br></pre></td></tr></table></figure></p>
+<p>修改 package.json 文件中的 babel 参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;babel&quot;: &#123;</span><br><span class="line">    &quot;plugins&quot;: [</span><br><span class="line">      [</span><br><span class="line">        &quot;@babel/plugin-proposal-decorators&quot;,</span><br><span class="line">        &#123;</span><br><span class="line">          &quot;legacy&quot;: true</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    ],</span><br><span class="line">    &quot;presets&quot;: [</span><br><span class="line">      &quot;react-app&quot;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run eject</span><br></pre></td></tr></table></figure>
+<h5 id="关于“run-eject”报错解决"><a href="#关于“run-eject”报错解决" class="headerlink" title="关于“run eject”报错解决"></a>关于“run eject”报错解决</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &apos;run eject&apos;</span><br><span class="line">npm run eject</span><br></pre></td></tr></table></figure>
+<p>记得要使用git init初始化一下</p>
+<h4 id="react学习开始了"><a href="#react学习开始了" class="headerlink" title="react学习开始了"></a>react学习开始了</h4>
       
     </div>
     
@@ -411,7 +421,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://fyxgb.github.io/2018/11/09/javascript设计模式学习篇/" title="js设计模式学习－－单例模式">https://fyxgb.github.io/2018/11/09/javascript设计模式学习篇/</a>
+    <a href="https://fyxgb.github.io/2018/11/09/react与mobx搭建踩坑篇/" title="react,mobx学习篇">https://fyxgb.github.io/2018/11/09/react与mobx搭建踩坑篇/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -426,9 +436,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" <i="" class="fa fa-tag"> javascript</a>
+            <a href="/tags/react/" <i="" class="fa fa-tag"> react</a>
           
-            <a href="/tags/设计模式/" <i="" class="fa fa-tag"> 设计模式</a>
+            <a href="/tags/mobx/" <i="" class="fa fa-tag"> mobx</a>
           
         </div>
       
@@ -441,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/09/react与mobx搭建踩坑篇/" rel="next" title="react,mobx学习篇">
-                <i class="fa fa-chevron-left"></i> react,mobx学习篇
+              <a href="/2018/11/07/hightcharts基础学习篇/" rel="next" title="hightCharts基础学习篇">
+                <i class="fa fa-chevron-left"></i> hightCharts基础学习篇
               </a>
             
           </div>
@@ -450,6 +460,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/09/javascript设计模式学习篇/" rel="prev" title="js设计模式学习－－单例模式">
+                js设计模式学习－－单例模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -583,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#单例模式"><span class="nav-number">1.</span> <span class="nav-text">单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#全局安装create-react-app"><span class="nav-number">1.</span> <span class="nav-text">全局安装create-react-app</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#新建一个项目"><span class="nav-number">2.</span> <span class="nav-text">新建一个项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#启动"><span class="nav-number">3.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装UI组件库"><span class="nav-number">4.</span> <span class="nav-text">安装UI组件库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加数据管理mobx"><span class="nav-number">5.</span> <span class="nav-text">添加数据管理mobx</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#新建文件夹-stores"><span class="nav-number">6.</span> <span class="nav-text">新建文件夹 stores</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改入口文件"><span class="nav-number">7.</span> <span class="nav-text">修改入口文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于使用修饰器报错解决"><span class="nav-number">8.</span> <span class="nav-text">关于使用修饰器报错解决</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于“run-eject”报错解决"><span class="nav-number">9.</span> <span class="nav-text">关于“run eject”报错解决</span></a></li></ol><li class="nav-item nav-level-4"><a class="nav-link" href="#react学习开始了"><span class="nav-number"></span> <span class="nav-text">react学习开始了</span></a></li></div>
             
 
           </div>
